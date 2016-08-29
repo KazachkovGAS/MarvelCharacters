@@ -1,0 +1,511 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B57B7F701D74364B0024ABFB /* TMCRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B57B7F6F1D74364B0024ABFB /* TMCRequestManager.m */; };
+		B5827DB31D748A4A00960CB6 /* Marvel_Characters.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B586C16B1D742149008A72BC /* Marvel_Characters.xcdatamodeld */; };
+		B586C1611D742149008A72BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B586C1601D742149008A72BC /* main.m */; };
+		B586C1641D742149008A72BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B586C1631D742149008A72BC /* AppDelegate.m */; };
+		B586C1671D742149008A72BC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B586C1661D742149008A72BC /* ViewController.m */; };
+		B586C16A1D742149008A72BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B586C1681D742149008A72BC /* Main.storyboard */; };
+		B586C16F1D742149008A72BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B586C16E1D742149008A72BC /* Assets.xcassets */; };
+		B586C1721D742149008A72BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B586C1701D742149008A72BC /* LaunchScreen.storyboard */; };
+		B59B4D461D744E4C00FC80B3 /* NSString+MD5Converter.m in Sources */ = {isa = PBXBuildFile; fileRef = B59B4D451D744E4C00FC80B3 /* NSString+MD5Converter.m */; };
+		B5B05CC31D748AFF0024A40C /* Events+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B05C981D748AFF0024A40C /* Events+CoreDataProperties.m */; };
+		B5B05CC41D748AFF0024A40C /* Events.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B05C9A1D748AFF0024A40C /* Events.m */; };
+		B5B05CC51D748AFF0024A40C /* Character+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B05C9C1D748AFF0024A40C /* Character+CoreDataProperties.m */; };
+		B5B05CC61D748AFF0024A40C /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B05C9E1D748AFF0024A40C /* Character.m */; };
+		B5B05CC71D748AFF0024A40C /* SeriesItem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B05CA01D748AFF0024A40C /* SeriesItem+CoreDataProperties.m */; };
+		B5B05CC81D748AFF0024A40C /* SeriesItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B05CA21D748AFF0024A40C /* SeriesItem.m */; };
+		B5B05CC91D748AFF0024A40C /* Series+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B05CA41D748AFF0024A40C /* Series+CoreDataProperties.m */; };
+		B5B05CCA1D748AFF0024A40C /* Series.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B05CA61D748AFF0024A40C /* Series.m */; };
+		B5B05CCB1D748AFF0024A40C /* Stories+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B05CA81D748AFF0024A40C /* Stories+CoreDataProperties.m */; };
+		B5B05CCC1D748AFF0024A40C /* Stories.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B05CAA1D748AFF0024A40C /* Stories.m */; };
+		B5B05CCD1D748AFF0024A40C /* Comics+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B05CAC1D748AFF0024A40C /* Comics+CoreDataProperties.m */; };
+		B5B05CCE1D748AFF0024A40C /* Comics.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B05CAE1D748AFF0024A40C /* Comics.m */; };
+		B5B05CCF1D748AFF0024A40C /* EventsItem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B05CB01D748AFF0024A40C /* EventsItem+CoreDataProperties.m */; };
+		B5B05CD01D748AFF0024A40C /* EventsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B05CB21D748AFF0024A40C /* EventsItem.m */; };
+		B5B05CD11D748AFF0024A40C /* ComicsItem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B05CB41D748AFF0024A40C /* ComicsItem+CoreDataProperties.m */; };
+		B5B05CD21D748AFF0024A40C /* ComicsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B05CB61D748AFF0024A40C /* ComicsItem.m */; };
+		B5B05CD31D748AFF0024A40C /* StoriesItem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B05CB81D748AFF0024A40C /* StoriesItem+CoreDataProperties.m */; };
+		B5B05CD41D748AFF0024A40C /* StoriesItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B05CBA1D748AFF0024A40C /* StoriesItem.m */; };
+		B5B05CD51D748AFF0024A40C /* Thumbnail+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B05CBC1D748AFF0024A40C /* Thumbnail+CoreDataProperties.m */; };
+		B5B05CD61D748AFF0024A40C /* Thumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B05CBE1D748AFF0024A40C /* Thumbnail.m */; };
+		B5B05CD71D748AFF0024A40C /* Urls+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B05CC01D748AFF0024A40C /* Urls+CoreDataProperties.m */; };
+		B5B05CD81D748AFF0024A40C /* Urls.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B05CC21D748AFF0024A40C /* Urls.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B57B7F6E1D74364B0024ABFB /* TMCRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMCRequestManager.h; path = Model/TMCRequestManager.h; sourceTree = "<group>"; };
+		B57B7F6F1D74364B0024ABFB /* TMCRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMCRequestManager.m; path = Model/TMCRequestManager.m; sourceTree = "<group>"; };
+		B586C15C1D742149008A72BC /* Marvel Characters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marvel Characters.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B586C1601D742149008A72BC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B586C1621D742149008A72BC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B586C1631D742149008A72BC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B586C1651D742149008A72BC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B586C1661D742149008A72BC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B586C1691D742149008A72BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B586C16C1D742149008A72BC /* Marvel_Characters.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Marvel_Characters.xcdatamodel; sourceTree = "<group>"; };
+		B586C16E1D742149008A72BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B586C1711D742149008A72BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B586C1731D742149008A72BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B59B4D441D744E4C00FC80B3 /* NSString+MD5Converter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+MD5Converter.h"; path = "Categories/NSString+MD5Converter.h"; sourceTree = "<group>"; };
+		B59B4D451D744E4C00FC80B3 /* NSString+MD5Converter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+MD5Converter.m"; path = "Categories/NSString+MD5Converter.m"; sourceTree = "<group>"; };
+		B5B05C971D748AFF0024A40C /* Events+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Events+CoreDataProperties.h"; path = "Core Data/Events+CoreDataProperties.h"; sourceTree = "<group>"; };
+		B5B05C981D748AFF0024A40C /* Events+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Events+CoreDataProperties.m"; path = "Core Data/Events+CoreDataProperties.m"; sourceTree = "<group>"; };
+		B5B05C991D748AFF0024A40C /* Events.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Events.h; path = "Core Data/Events.h"; sourceTree = "<group>"; };
+		B5B05C9A1D748AFF0024A40C /* Events.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Events.m; path = "Core Data/Events.m"; sourceTree = "<group>"; };
+		B5B05C9B1D748AFF0024A40C /* Character+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Character+CoreDataProperties.h"; path = "Core Data/Character+CoreDataProperties.h"; sourceTree = "<group>"; };
+		B5B05C9C1D748AFF0024A40C /* Character+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Character+CoreDataProperties.m"; path = "Core Data/Character+CoreDataProperties.m"; sourceTree = "<group>"; };
+		B5B05C9D1D748AFF0024A40C /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Character.h; path = "Core Data/Character.h"; sourceTree = "<group>"; };
+		B5B05C9E1D748AFF0024A40C /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Character.m; path = "Core Data/Character.m"; sourceTree = "<group>"; };
+		B5B05C9F1D748AFF0024A40C /* SeriesItem+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SeriesItem+CoreDataProperties.h"; path = "Core Data/SeriesItem+CoreDataProperties.h"; sourceTree = "<group>"; };
+		B5B05CA01D748AFF0024A40C /* SeriesItem+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "SeriesItem+CoreDataProperties.m"; path = "Core Data/SeriesItem+CoreDataProperties.m"; sourceTree = "<group>"; };
+		B5B05CA11D748AFF0024A40C /* SeriesItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SeriesItem.h; path = "Core Data/SeriesItem.h"; sourceTree = "<group>"; };
+		B5B05CA21D748AFF0024A40C /* SeriesItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SeriesItem.m; path = "Core Data/SeriesItem.m"; sourceTree = "<group>"; };
+		B5B05CA31D748AFF0024A40C /* Series+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Series+CoreDataProperties.h"; path = "Core Data/Series+CoreDataProperties.h"; sourceTree = "<group>"; };
+		B5B05CA41D748AFF0024A40C /* Series+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Series+CoreDataProperties.m"; path = "Core Data/Series+CoreDataProperties.m"; sourceTree = "<group>"; };
+		B5B05CA51D748AFF0024A40C /* Series.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Series.h; path = "Core Data/Series.h"; sourceTree = "<group>"; };
+		B5B05CA61D748AFF0024A40C /* Series.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Series.m; path = "Core Data/Series.m"; sourceTree = "<group>"; };
+		B5B05CA71D748AFF0024A40C /* Stories+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Stories+CoreDataProperties.h"; path = "Core Data/Stories+CoreDataProperties.h"; sourceTree = "<group>"; };
+		B5B05CA81D748AFF0024A40C /* Stories+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Stories+CoreDataProperties.m"; path = "Core Data/Stories+CoreDataProperties.m"; sourceTree = "<group>"; };
+		B5B05CA91D748AFF0024A40C /* Stories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Stories.h; path = "Core Data/Stories.h"; sourceTree = "<group>"; };
+		B5B05CAA1D748AFF0024A40C /* Stories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Stories.m; path = "Core Data/Stories.m"; sourceTree = "<group>"; };
+		B5B05CAB1D748AFF0024A40C /* Comics+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Comics+CoreDataProperties.h"; path = "Core Data/Comics+CoreDataProperties.h"; sourceTree = "<group>"; };
+		B5B05CAC1D748AFF0024A40C /* Comics+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Comics+CoreDataProperties.m"; path = "Core Data/Comics+CoreDataProperties.m"; sourceTree = "<group>"; };
+		B5B05CAD1D748AFF0024A40C /* Comics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Comics.h; path = "Core Data/Comics.h"; sourceTree = "<group>"; };
+		B5B05CAE1D748AFF0024A40C /* Comics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Comics.m; path = "Core Data/Comics.m"; sourceTree = "<group>"; };
+		B5B05CAF1D748AFF0024A40C /* EventsItem+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EventsItem+CoreDataProperties.h"; path = "Core Data/EventsItem+CoreDataProperties.h"; sourceTree = "<group>"; };
+		B5B05CB01D748AFF0024A40C /* EventsItem+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "EventsItem+CoreDataProperties.m"; path = "Core Data/EventsItem+CoreDataProperties.m"; sourceTree = "<group>"; };
+		B5B05CB11D748AFF0024A40C /* EventsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventsItem.h; path = "Core Data/EventsItem.h"; sourceTree = "<group>"; };
+		B5B05CB21D748AFF0024A40C /* EventsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventsItem.m; path = "Core Data/EventsItem.m"; sourceTree = "<group>"; };
+		B5B05CB31D748AFF0024A40C /* ComicsItem+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ComicsItem+CoreDataProperties.h"; path = "Core Data/ComicsItem+CoreDataProperties.h"; sourceTree = "<group>"; };
+		B5B05CB41D748AFF0024A40C /* ComicsItem+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ComicsItem+CoreDataProperties.m"; path = "Core Data/ComicsItem+CoreDataProperties.m"; sourceTree = "<group>"; };
+		B5B05CB51D748AFF0024A40C /* ComicsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComicsItem.h; path = "Core Data/ComicsItem.h"; sourceTree = "<group>"; };
+		B5B05CB61D748AFF0024A40C /* ComicsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComicsItem.m; path = "Core Data/ComicsItem.m"; sourceTree = "<group>"; };
+		B5B05CB71D748AFF0024A40C /* StoriesItem+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "StoriesItem+CoreDataProperties.h"; path = "Core Data/StoriesItem+CoreDataProperties.h"; sourceTree = "<group>"; };
+		B5B05CB81D748AFF0024A40C /* StoriesItem+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "StoriesItem+CoreDataProperties.m"; path = "Core Data/StoriesItem+CoreDataProperties.m"; sourceTree = "<group>"; };
+		B5B05CB91D748AFF0024A40C /* StoriesItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoriesItem.h; path = "Core Data/StoriesItem.h"; sourceTree = "<group>"; };
+		B5B05CBA1D748AFF0024A40C /* StoriesItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoriesItem.m; path = "Core Data/StoriesItem.m"; sourceTree = "<group>"; };
+		B5B05CBB1D748AFF0024A40C /* Thumbnail+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Thumbnail+CoreDataProperties.h"; path = "Core Data/Thumbnail+CoreDataProperties.h"; sourceTree = "<group>"; };
+		B5B05CBC1D748AFF0024A40C /* Thumbnail+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Thumbnail+CoreDataProperties.m"; path = "Core Data/Thumbnail+CoreDataProperties.m"; sourceTree = "<group>"; };
+		B5B05CBD1D748AFF0024A40C /* Thumbnail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Thumbnail.h; path = "Core Data/Thumbnail.h"; sourceTree = "<group>"; };
+		B5B05CBE1D748AFF0024A40C /* Thumbnail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Thumbnail.m; path = "Core Data/Thumbnail.m"; sourceTree = "<group>"; };
+		B5B05CBF1D748AFF0024A40C /* Urls+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Urls+CoreDataProperties.h"; path = "Core Data/Urls+CoreDataProperties.h"; sourceTree = "<group>"; };
+		B5B05CC01D748AFF0024A40C /* Urls+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Urls+CoreDataProperties.m"; path = "Core Data/Urls+CoreDataProperties.m"; sourceTree = "<group>"; };
+		B5B05CC11D748AFF0024A40C /* Urls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Urls.h; path = "Core Data/Urls.h"; sourceTree = "<group>"; };
+		B5B05CC21D748AFF0024A40C /* Urls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Urls.m; path = "Core Data/Urls.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B586C1591D742149008A72BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B586C1531D742149008A72BC = {
+			isa = PBXGroup;
+			children = (
+				B586C15E1D742149008A72BC /* Marvel Characters */,
+				B586C15D1D742149008A72BC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B586C15D1D742149008A72BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B586C15C1D742149008A72BC /* Marvel Characters.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B586C15E1D742149008A72BC /* Marvel Characters */ = {
+			isa = PBXGroup;
+			children = (
+				B59B4D431D744DEC00FC80B3 /* Categories */,
+				B586C17F1D742775008A72BC /* Model */,
+				B586C17B1D74218F008A72BC /* View */,
+				B586C17A1D742186008A72BC /* Controller */,
+				B586C16E1D742149008A72BC /* Assets.xcassets */,
+				B586C1791D742177008A72BC /* Core Data  */,
+				B586C15F1D742149008A72BC /* Supporting Files */,
+			);
+			path = "Marvel Characters";
+			sourceTree = "<group>";
+		};
+		B586C15F1D742149008A72BC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B586C1621D742149008A72BC /* AppDelegate.h */,
+				B586C1631D742149008A72BC /* AppDelegate.m */,
+				B586C1701D742149008A72BC /* LaunchScreen.storyboard */,
+				B586C1731D742149008A72BC /* Info.plist */,
+				B586C1601D742149008A72BC /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B586C1791D742177008A72BC /* Core Data  */ = {
+			isa = PBXGroup;
+			children = (
+				B586C16B1D742149008A72BC /* Marvel_Characters.xcdatamodeld */,
+				B5B05C971D748AFF0024A40C /* Events+CoreDataProperties.h */,
+				B5B05C981D748AFF0024A40C /* Events+CoreDataProperties.m */,
+				B5B05C991D748AFF0024A40C /* Events.h */,
+				B5B05C9A1D748AFF0024A40C /* Events.m */,
+				B5B05C9B1D748AFF0024A40C /* Character+CoreDataProperties.h */,
+				B5B05C9C1D748AFF0024A40C /* Character+CoreDataProperties.m */,
+				B5B05C9D1D748AFF0024A40C /* Character.h */,
+				B5B05C9E1D748AFF0024A40C /* Character.m */,
+				B5B05C9F1D748AFF0024A40C /* SeriesItem+CoreDataProperties.h */,
+				B5B05CA01D748AFF0024A40C /* SeriesItem+CoreDataProperties.m */,
+				B5B05CA11D748AFF0024A40C /* SeriesItem.h */,
+				B5B05CA21D748AFF0024A40C /* SeriesItem.m */,
+				B5B05CA31D748AFF0024A40C /* Series+CoreDataProperties.h */,
+				B5B05CA41D748AFF0024A40C /* Series+CoreDataProperties.m */,
+				B5B05CA51D748AFF0024A40C /* Series.h */,
+				B5B05CA61D748AFF0024A40C /* Series.m */,
+				B5B05CA71D748AFF0024A40C /* Stories+CoreDataProperties.h */,
+				B5B05CA81D748AFF0024A40C /* Stories+CoreDataProperties.m */,
+				B5B05CA91D748AFF0024A40C /* Stories.h */,
+				B5B05CAA1D748AFF0024A40C /* Stories.m */,
+				B5B05CAB1D748AFF0024A40C /* Comics+CoreDataProperties.h */,
+				B5B05CAC1D748AFF0024A40C /* Comics+CoreDataProperties.m */,
+				B5B05CAD1D748AFF0024A40C /* Comics.h */,
+				B5B05CAE1D748AFF0024A40C /* Comics.m */,
+				B5B05CAF1D748AFF0024A40C /* EventsItem+CoreDataProperties.h */,
+				B5B05CB01D748AFF0024A40C /* EventsItem+CoreDataProperties.m */,
+				B5B05CB11D748AFF0024A40C /* EventsItem.h */,
+				B5B05CB21D748AFF0024A40C /* EventsItem.m */,
+				B5B05CB31D748AFF0024A40C /* ComicsItem+CoreDataProperties.h */,
+				B5B05CB41D748AFF0024A40C /* ComicsItem+CoreDataProperties.m */,
+				B5B05CB51D748AFF0024A40C /* ComicsItem.h */,
+				B5B05CB61D748AFF0024A40C /* ComicsItem.m */,
+				B5B05CB71D748AFF0024A40C /* StoriesItem+CoreDataProperties.h */,
+				B5B05CB81D748AFF0024A40C /* StoriesItem+CoreDataProperties.m */,
+				B5B05CB91D748AFF0024A40C /* StoriesItem.h */,
+				B5B05CBA1D748AFF0024A40C /* StoriesItem.m */,
+				B5B05CBB1D748AFF0024A40C /* Thumbnail+CoreDataProperties.h */,
+				B5B05CBC1D748AFF0024A40C /* Thumbnail+CoreDataProperties.m */,
+				B5B05CBD1D748AFF0024A40C /* Thumbnail.h */,
+				B5B05CBE1D748AFF0024A40C /* Thumbnail.m */,
+				B5B05CBF1D748AFF0024A40C /* Urls+CoreDataProperties.h */,
+				B5B05CC01D748AFF0024A40C /* Urls+CoreDataProperties.m */,
+				B5B05CC11D748AFF0024A40C /* Urls.h */,
+				B5B05CC21D748AFF0024A40C /* Urls.m */,
+			);
+			name = "Core Data ";
+			sourceTree = "<group>";
+		};
+		B586C17A1D742186008A72BC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B586C1651D742149008A72BC /* ViewController.h */,
+				B586C1661D742149008A72BC /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		B586C17B1D74218F008A72BC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B586C1681D742149008A72BC /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		B586C17F1D742775008A72BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B57B7F6E1D74364B0024ABFB /* TMCRequestManager.h */,
+				B57B7F6F1D74364B0024ABFB /* TMCRequestManager.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B59B4D431D744DEC00FC80B3 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				B59B4D441D744E4C00FC80B3 /* NSString+MD5Converter.h */,
+				B59B4D451D744E4C00FC80B3 /* NSString+MD5Converter.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B586C15B1D742149008A72BC /* Marvel Characters */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B586C1761D742149008A72BC /* Build configuration list for PBXNativeTarget "Marvel Characters" */;
+			buildPhases = (
+				B586C1581D742149008A72BC /* Sources */,
+				B586C1591D742149008A72BC /* Frameworks */,
+				B586C15A1D742149008A72BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Marvel Characters";
+			productName = "Marvel Characters";
+			productReference = B586C15C1D742149008A72BC /* Marvel Characters.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B586C1541D742149008A72BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Максим";
+				TargetAttributes = {
+					B586C15B1D742149008A72BC = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = B586C1571D742149008A72BC /* Build configuration list for PBXProject "Marvel Characters" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B586C1531D742149008A72BC;
+			productRefGroup = B586C15D1D742149008A72BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B586C15B1D742149008A72BC /* Marvel Characters */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B586C15A1D742149008A72BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B586C1721D742149008A72BC /* LaunchScreen.storyboard in Resources */,
+				B586C16F1D742149008A72BC /* Assets.xcassets in Resources */,
+				B586C16A1D742149008A72BC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B586C1581D742149008A72BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5B05CD41D748AFF0024A40C /* StoriesItem.m in Sources */,
+				B5B05CC71D748AFF0024A40C /* SeriesItem+CoreDataProperties.m in Sources */,
+				B5B05CD61D748AFF0024A40C /* Thumbnail.m in Sources */,
+				B5B05CC81D748AFF0024A40C /* SeriesItem.m in Sources */,
+				B5B05CD71D748AFF0024A40C /* Urls+CoreDataProperties.m in Sources */,
+				B5B05CCA1D748AFF0024A40C /* Series.m in Sources */,
+				B5B05CCD1D748AFF0024A40C /* Comics+CoreDataProperties.m in Sources */,
+				B5B05CD21D748AFF0024A40C /* ComicsItem.m in Sources */,
+				B5B05CC51D748AFF0024A40C /* Character+CoreDataProperties.m in Sources */,
+				B5B05CD51D748AFF0024A40C /* Thumbnail+CoreDataProperties.m in Sources */,
+				B5B05CC61D748AFF0024A40C /* Character.m in Sources */,
+				B5B05CC41D748AFF0024A40C /* Events.m in Sources */,
+				B5B05CCE1D748AFF0024A40C /* Comics.m in Sources */,
+				B5B05CC91D748AFF0024A40C /* Series+CoreDataProperties.m in Sources */,
+				B586C1671D742149008A72BC /* ViewController.m in Sources */,
+				B57B7F701D74364B0024ABFB /* TMCRequestManager.m in Sources */,
+				B5B05CCB1D748AFF0024A40C /* Stories+CoreDataProperties.m in Sources */,
+				B5B05CCF1D748AFF0024A40C /* EventsItem+CoreDataProperties.m in Sources */,
+				B586C1641D742149008A72BC /* AppDelegate.m in Sources */,
+				B5B05CD81D748AFF0024A40C /* Urls.m in Sources */,
+				B5827DB31D748A4A00960CB6 /* Marvel_Characters.xcdatamodeld in Sources */,
+				B5B05CD01D748AFF0024A40C /* EventsItem.m in Sources */,
+				B586C1611D742149008A72BC /* main.m in Sources */,
+				B5B05CCC1D748AFF0024A40C /* Stories.m in Sources */,
+				B5B05CD11D748AFF0024A40C /* ComicsItem+CoreDataProperties.m in Sources */,
+				B59B4D461D744E4C00FC80B3 /* NSString+MD5Converter.m in Sources */,
+				B5B05CD31D748AFF0024A40C /* StoriesItem+CoreDataProperties.m in Sources */,
+				B5B05CC31D748AFF0024A40C /* Events+CoreDataProperties.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B586C1681D742149008A72BC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B586C1691D742149008A72BC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B586C1701D742149008A72BC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B586C1711D742149008A72BC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B586C1741D742149008A72BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B586C1751D742149008A72BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B586C1771D742149008A72BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Marvel Characters/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gas.Marvel-Characters";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B586C1781D742149008A72BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Marvel Characters/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gas.Marvel-Characters";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B586C1571D742149008A72BC /* Build configuration list for PBXProject "Marvel Characters" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B586C1741D742149008A72BC /* Debug */,
+				B586C1751D742149008A72BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B586C1761D742149008A72BC /* Build configuration list for PBXNativeTarget "Marvel Characters" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B586C1771D742149008A72BC /* Debug */,
+				B586C1781D742149008A72BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B586C16B1D742149008A72BC /* Marvel_Characters.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B586C16C1D742149008A72BC /* Marvel_Characters.xcdatamodel */,
+			);
+			currentVersion = B586C16C1D742149008A72BC /* Marvel_Characters.xcdatamodel */;
+			path = Marvel_Characters.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B586C1541D742149008A72BC /* Project object */;
+}
