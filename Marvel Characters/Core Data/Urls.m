@@ -11,6 +11,12 @@
 
 @implementation Urls
 
-// Insert code here to add functionality to your managed object subclass
++(FEMMapping *)defaultMapping{
+    
+    FEMMapping *mapping = [[FEMMapping alloc] initWithEntityName:@"Urls"];
+    [mapping addAttributesFromDictionary:@{@"type" : @"type",
+                                           @"url" : @"url"}];
+    return mapping;
+}
 
 @end

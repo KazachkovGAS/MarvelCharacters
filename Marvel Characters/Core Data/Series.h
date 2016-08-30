@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import <FastEasyMapping/FastEasyMapping.h>
 
 @class Character, SeriesItem;
 
@@ -15,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Series : NSManagedObject
 
-// Insert code here to declare functionality of your managed object subclass
++(FEMMapping *)defaultMapping;
 
 @end
 

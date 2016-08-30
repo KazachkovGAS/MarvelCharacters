@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nullable, nonatomic, retain) NSNumber *available;
 @property (nullable, nonatomic, retain) NSString *collectionURI;
-@property (nullable, nonatomic, retain) NSSet<SeriesItem *> *series;
+@property (nullable, nonatomic, retain) NSSet<SeriesItem *> *seriesItems;
 @property (nullable, nonatomic, retain) Character *seriesContex;
 
 @end

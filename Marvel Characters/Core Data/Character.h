@@ -2,7 +2,7 @@
 //  Character.h
 //  Marvel Characters
 //
-//  Created by Максим on 29.08.16.
+//  Created by Максим on 30.08.16.
 //  Copyright © 2016 Максим. All rights reserved.
 //
 
@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Character : NSManagedObject
 
-// Insert code here to declare functionality of your managed object subclass
++(NSArray *)addNewData:(NSArray *)data inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
 
 @end
 

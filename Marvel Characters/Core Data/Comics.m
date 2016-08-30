@@ -12,6 +12,13 @@
 
 @implementation Comics
 
-// Insert code here to add functionality to your managed object subclass
-
++(FEMMapping *)defaultMapping{
+    
+    FEMMapping *mapping = [[FEMMapping alloc] initWithEntityName:@"Comics"];
+    [mapping addAttributesFromDictionary:@{@"available" : @"available",
+                                           @"collectionURI" : @"collectionURI"}];
+    [mapping addToManyRelationshipMapping:[ComicsItem defaultMapping] forProperty:@"comicsItems" keyPath:@"items"];
+   
+    return mapping;
+}
 @end

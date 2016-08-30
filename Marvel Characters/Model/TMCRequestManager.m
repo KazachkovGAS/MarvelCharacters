@@ -43,7 +43,11 @@
     
 }
 
-
+-(void)printDatabase{
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Character"];
+    id result = [self.managedObjectContext executeFetchRequest:request error:nil];
+    NSLog(@"Added %lu records in DataBase", (unsigned long)[result count]);
+}
 
 -(void)getRequest{
     NSString *stringURL = [NSString stringWithFormat:@"%@/%@?", _baseURL, _marvelCharactersURL];
@@ -52,45 +56,45 @@
     NSLog(@"URL For Request : %@", stringURL);
     NSURL *url = [NSURL URLWithString:stringURL];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
-   
+    
     NSURLSessionDataTask *sessionTask = [self.session dataTaskWithRequest:request
-                    completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-                     
-                        error = nil;
-                        id jsonObject = [NSJSONSerialization JSONObjectWithData:data
-                                                                        options:NSJSONReadingAllowFragments
-                                                                          error:&error];
-                        if (jsonObject != nil && error == nil){
-                            NSLog(@"Successfully deserialized!");
-                            if ([jsonObject isKindOfClass:[NSDictionary class]]){
-                                NSDictionary *deserializedDictionary = (NSDictionary *)jsonObject;
-                                NSLog(@"Deserialized JSON Dictionary = %@",deserializedDictionary);
-                                // Adding data to the Core Data
-                                for (id element in deserializedDictionary) {
-                                    
-                                    Character *newChacracter = [NSEntityDescription insertNewObjectForEntityForName:@"Character"
-                                                                                             inManagedObjectContext:self.managedObjectContext];
-                                }
-                                
-                                
-                                
-                                
-                            } else {
-                                NSLog(@"Was returned any another object. Don't know what to do. Deserializer returns only dictionaries or arrays!");
-                            }
-                        } else if (error != nil){
-                            NSLog(@"AN error happend while deserializing the JSON data.");
-                        }
-                        
-                        
-                    }];
+                                                        completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error){
+                                                            
+                                              id jsonObject = [NSJSONSerialization JSONObjectWithData:data
+                                              options:NSJSONReadingAllowFragments
+                                              error:&error];
+                                                            
+                                             if (jsonObject != nil && error == nil){
+                                              NSLog(@"Successfully deserialized!");
+                                              if ([jsonObject isKindOfClass:[NSDictionary class]]){
+                                              NSDictionary *deserializedDictionary = (NSDictionary *)jsonObject;
+                                           
+                                                  // Adding data to the Core Data
+                                                  if (data && error == nil){
+                                                      NSArray *characters = deserializedDictionary[@"data"][@"results"];
+                                                      [Character addNewData:characters inManagedObjectContext:self.managedObjectContext];
+                                                      if (![self.managedObjectContext save:&error]) {
+                                                          NSLog(@"Whoops something gone wrong. Could not save to Core Data");
+                                                      } else {
+                                                          [self printDatabase];
+                                                      }
+                                                  }
+                                                                                            } else {
+                                              NSLog(@"Was returned any another object. Don't know what to do. Deserializer returns only dictionaries or arrays!");
+                                              }
+                                              } else if (error != nil){
+                                              NSLog(@"An error happend while deserializing the JSON data.");
+                                              }
+                                             
+                                             
+                                         }];
     [sessionTask resume];
-
+    
 }
 
 -(NSString *)timestamp: (NSNumber *)ts publicKey: (NSString *)publicKey privateKey: (NSString *)privateKey{
     
-   return [[NSString stringWithFormat:@"%@%@%@",ts, privateKey, publicKey] md5];
+    return [[NSString stringWithFormat:@"%@%@%@",ts, privateKey, publicKey] md5];
     
 }
 

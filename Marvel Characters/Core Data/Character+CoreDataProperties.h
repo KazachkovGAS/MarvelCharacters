@@ -2,7 +2,7 @@
 //  Character+CoreDataProperties.h
 //  Marvel Characters
 //
-//  Created by Максим on 29.08.16.
+//  Created by Максим on 30.08.16.
 //  Copyright © 2016 Максим. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Character (CoreDataProperties)
 
 @property (nullable, nonatomic, retain) NSString *descriptionBio;
-@property (nullable, nonatomic, retain) NSDate *modified;
+@property (nullable, nonatomic, retain) NSString *modified;
 @property (nullable, nonatomic, retain) NSString *name;
 @property (nullable, nonatomic, retain) NSString *resourceURI;
 @property (nullable, nonatomic, retain) NSNumber *uid;

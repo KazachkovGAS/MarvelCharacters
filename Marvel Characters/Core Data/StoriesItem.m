@@ -11,6 +11,13 @@
 
 @implementation StoriesItem
 
-// Insert code here to add functionality to your managed object subclass
++(FEMMapping *)defaultMapping{
+    FEMMapping *mapping = [[FEMMapping alloc] initWithEntityName:@"StoriesItem"];
+    [mapping addAttributesFromDictionary:@{@"resourceURI" : @"resourceURI",
+                                           @"name" : @"name",
+                                           @"type" : @"type"}];
+    return mapping;
+
+}
 
 @end

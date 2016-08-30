@@ -12,6 +12,14 @@
 
 @implementation Stories
 
-// Insert code here to add functionality to your managed object subclass
++(FEMMapping *)defaultMapping{
+    
+    FEMMapping *mapping = [[FEMMapping alloc] initWithEntityName:@"Stories"];
+    [mapping addAttributesFromDictionary:@{@"available" : @"available",
+                                           @"collectionURI" : @"collectionURI"}];
+    [mapping addToManyRelationshipMapping:[StoriesItem defaultMapping] forProperty:@"storiesItems" keyPath:@"items"];
+
+    return mapping;
+}
 
 @end

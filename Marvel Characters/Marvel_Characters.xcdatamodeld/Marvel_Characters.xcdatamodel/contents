@@ -2,7 +2,7 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15A278b" minimumToolsVersion="Automatic">
     <entity name="Character" representedClassName="Character" syncable="YES">
         <attribute name="descriptionBio" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="modified" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="modified" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="resourceURI" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="uid" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
@@ -16,7 +16,7 @@
     <entity name="Comics" representedClassName="Comics" syncable="YES">
         <attribute name="available" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="collectionURI" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="comicsContext" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Character" inverseName="comics" inverseEntity="Character" syncable="YES"/>
+        <relationship name="comicsContext" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Character" inverseName="comics" inverseEntity="Character" syncable="YES"/>
         <relationship name="comicsItems" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ComicsItem" inverseName="comicsItem" inverseEntity="ComicsItem" syncable="YES"/>
     </entity>
     <entity name="ComicsItem" representedClassName="ComicsItem" syncable="YES">
@@ -27,7 +27,7 @@
     <entity name="Events" representedClassName="Events" syncable="YES">
         <attribute name="available" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="collectionURI" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="eventsContext" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Character" inverseName="events" inverseEntity="Character" syncable="YES"/>
+        <relationship name="eventsContext" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Character" inverseName="events" inverseEntity="Character" syncable="YES"/>
         <relationship name="eventsItems" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="EventsItem" inverseName="eventItem" inverseEntity="EventsItem" syncable="YES"/>
     </entity>
     <entity name="EventsItem" representedClassName="EventsItem" syncable="YES">
@@ -38,19 +38,19 @@
     <entity name="Series" representedClassName="Series" syncable="YES">
         <attribute name="available" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="collectionURI" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="series" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SeriesItem" inverseName="seriesItem" inverseEntity="SeriesItem" syncable="YES"/>
         <relationship name="seriesContex" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Character" inverseName="series" inverseEntity="Character" syncable="YES"/>
+        <relationship name="seriesItems" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="SeriesItem" inverseName="seriesItem" inverseEntity="SeriesItem" syncable="YES"/>
     </entity>
     <entity name="SeriesItem" representedClassName="SeriesItem" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="resourceURI" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="seriesItem" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Series" inverseName="series" inverseEntity="Series" syncable="YES"/>
+        <relationship name="seriesItem" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Series" inverseName="seriesItems" inverseEntity="Series" syncable="YES"/>
     </entity>
     <entity name="Stories" representedClassName="Stories" syncable="YES">
         <attribute name="available" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="collectionURI" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="storiesContext" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Character" inverseName="stories" inverseEntity="Character" syncable="YES"/>
-        <relationship name="storiesItems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="StoriesItem" inverseName="storiesitem" inverseEntity="StoriesItem" syncable="YES"/>
+        <relationship name="storiesItems" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="StoriesItem" inverseName="storiesitem" inverseEntity="StoriesItem" syncable="YES"/>
     </entity>
     <entity name="StoriesItem" representedClassName="StoriesItem" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -71,13 +71,13 @@
     <elements>
         <element name="Character" positionX="-2162" positionY="57" width="128" height="208"/>
         <element name="Comics" positionX="-1881" positionY="180" width="128" height="103"/>
-        <element name="ComicsItem" positionX="-1674" positionY="180" width="128" height="88"/>
+        <element name="ComicsItem" positionX="-1676" positionY="189" width="128" height="88"/>
         <element name="Events" positionX="-1881" positionY="288" width="128" height="103"/>
         <element name="EventsItem" positionX="-1676" positionY="288" width="128" height="88"/>
         <element name="Series" positionX="-1881" positionY="-45" width="128" height="103"/>
-        <element name="SeriesItem" positionX="-1674" positionY="-45" width="128" height="88"/>
+        <element name="SeriesItem" positionX="-1676" positionY="-36" width="128" height="88"/>
         <element name="Stories" positionX="-1881" positionY="68" width="128" height="103"/>
-        <element name="StoriesItem" positionX="-1676" positionY="54" width="128" height="103"/>
+        <element name="StoriesItem" positionX="-1676" positionY="68" width="128" height="103"/>
         <element name="Thumbnail" positionX="-2387" positionY="54" width="128" height="88"/>
         <element name="Urls" positionX="-2387" positionY="171" width="128" height="88"/>
     </elements>

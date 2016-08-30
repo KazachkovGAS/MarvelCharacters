@@ -9,8 +9,17 @@
 #import "Thumbnail.h"
 #import "Character.h"
 
+
 @implementation Thumbnail
 
-// Insert code here to add functionality to your managed object subclass
-
++(FEMMapping *)defaultMapping {
+  
+    FEMMapping *mapping = [[FEMMapping alloc] initWithEntityName:@"Thumbnail"];
+    [mapping addAttributesFromDictionary:@{@"path" : @"path",
+                                           @"extension" : @"extension"}];
+    
+    
+    return mapping;
+  
+}
 @end

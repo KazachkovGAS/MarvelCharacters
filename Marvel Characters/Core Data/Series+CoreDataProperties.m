@@ -15,7 +15,7 @@
 
 @dynamic available;
 @dynamic collectionURI;
-@dynamic series;
+@dynamic seriesItems;
 @dynamic seriesContex;
 
 @end

@@ -12,6 +12,12 @@
 
 @implementation Events
 
-// Insert code here to add functionality to your managed object subclass
++(FEMMapping *)defaultMapping{
+    FEMMapping *mapping = [[FEMMapping alloc] initWithEntityName:@"Events"];
+    [mapping addAttributesFromDictionary:@{@"available" : @"available",
+                                           @"collectionURI" : @"collectionURI"}];
+    [mapping addToManyRelationshipMapping:[EventsItem defaultMapping] forProperty:@"eventsItems" keyPath:@"items"];
+    return mapping;
+}
 
 @end

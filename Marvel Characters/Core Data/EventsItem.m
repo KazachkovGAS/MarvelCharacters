@@ -11,6 +11,13 @@
 
 @implementation EventsItem
 
-// Insert code here to add functionality to your managed object subclass
++(FEMMapping *)defaultMapping{
+    
+    FEMMapping *mapping = [[FEMMapping alloc] initWithEntityName:@"EventsItem"];
+    [mapping addAttributesFromDictionary:@{@"resourceURI" : @"resourceURI",
+                                           @"name" : @"name"}];
+    return mapping;
+
+}
 
 @end
