@@ -45,4 +45,14 @@
     return [FEMDeserializer collectionFromRepresentation:data mapping:mapping context:managedObjectContext];
 }
 
++(void)loadPicturesFromCharactersArray:(NSArray *)characters intoManagedObjectContext:(NSManagedObjectContext *)context{
+    
+    
+    
+}
+
+
+
+
+
 @end

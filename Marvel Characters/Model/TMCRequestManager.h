@@ -10,8 +10,11 @@
 
 @interface TMCRequestManager : NSObject
 
--(void)startSession;
--(void)getRequest;
++ (instancetype)sharedInstance;
+
+- (void)startSession;
+- (void)getRequestWithURL:(NSString *)url completion:(void (^)(NSDictionary *elements, NSError *error))completion;
+
 
 
 @end

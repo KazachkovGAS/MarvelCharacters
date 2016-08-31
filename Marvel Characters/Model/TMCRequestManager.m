@@ -7,6 +7,8 @@
 //
 
 #import "TMCRequestManager.h"
+#import "Urls.h"
+#import "ApiKeys.h"
 #import "NSString+MD5Converter.h"
 #import "Character.h"
 #import "AppDelegate.h"
@@ -16,87 +18,72 @@
 @property(nonatomic, strong) NSURLSession *session;
 @property(nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
-#define _publicKey   @"44c6606f72114e4a9eaf84cb93fb8863"
-#define _privateKey  @"a92b6b3b8140846adf4eeebb64d576b5570be727"
-
-#define _baseURL @"http://gateway.marvel.com"
-#define _marvelCharactersURL @"v1/public/characters"
-
-#define _timestamp @1
-
 @end
 
 @implementation TMCRequestManager
 
--(NSManagedObjectContext *)managedObjectContext{
-    if (!_managedObjectContext){
-        AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-        _managedObjectContext = delegate.managedObjectContext;
-    }
-    return _managedObjectContext;
+// Singleton
++ (instancetype)sharedInstance {
+    static TMCRequestManager *instance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        instance = [[TMCRequestManager alloc] init];
+    });
+    return instance;
 }
 
--(void)startSession{
+- (void)startSession {
     
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-    _session = [NSURLSession sessionWithConfiguration:configuration];
-    
+    self.session = [NSURLSession sessionWithConfiguration:configuration];
+
 }
 
--(void)printDatabase{
-    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Character"];
-    id result = [self.managedObjectContext executeFetchRequest:request error:nil];
-    NSLog(@"Added %lu records in DataBase", (unsigned long)[result count]);
-}
-
--(void)getRequest{
-    NSString *stringURL = [NSString stringWithFormat:@"%@/%@?", _baseURL, _marvelCharactersURL];
+- (NSURLRequest *)prepareRequestWithUrl: (NSString *)url{
+    [self startSession];
+    NSString *stringURL = [NSString stringWithFormat:@"%@/%@?", _baseURL, url];
     NSString *hash = [self timestamp:_timestamp publicKey:_publicKey privateKey:_privateKey];
-    stringURL = [NSString stringWithFormat:@"%@ts=%@&apikey=%@&hash=%@",stringURL, _timestamp, _publicKey, hash];
+    stringURL = [NSString stringWithFormat:@"%@ts=%@&apikey=%@&hash=%@", stringURL, _timestamp, _publicKey, hash];
     NSLog(@"URL For Request : %@", stringURL);
-    NSURL *url = [NSURL URLWithString:stringURL];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSURL *requestURL = [NSURL URLWithString:stringURL];
+    NSURLRequest *request = [NSURLRequest requestWithURL:requestURL];
+    return request;
+}
+
+- (NSString *)timestamp: (NSNumber *)ts publicKey: (NSString *)publicKey privateKey: (NSString *)privateKey {
+    
+    return [[NSString stringWithFormat:@"%@%@%@",ts, privateKey, publicKey] md5];
+}
+
+- (void)getRequestWithURL:(NSString *)url completion:(void (^)(NSDictionary *elements, NSError *error))completion {
+
+    NSURLRequest *request = [self prepareRequestWithUrl:url];
     
     NSURLSessionDataTask *sessionTask = [self.session dataTaskWithRequest:request
                                                         completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error){
                                                             
-                                              id jsonObject = [NSJSONSerialization JSONObjectWithData:data
-                                              options:NSJSONReadingAllowFragments
-                                              error:&error];
-                                                            
-                                             if (jsonObject != nil && error == nil){
-                                              NSLog(@"Successfully deserialized!");
-                                              if ([jsonObject isKindOfClass:[NSDictionary class]]){
-                                              NSDictionary *deserializedDictionary = (NSDictionary *)jsonObject;
-                                           
-                                                  // Adding data to the Core Data
-                                                  if (data && error == nil){
-                                                      NSArray *characters = deserializedDictionary[@"data"][@"results"];
-                                                      [Character addNewData:characters inManagedObjectContext:self.managedObjectContext];
-                                                      if (![self.managedObjectContext save:&error]) {
-                                                          NSLog(@"Whoops something gone wrong. Could not save to Core Data");
-                                                      } else {
-                                                          [self printDatabase];
-                                                      }
-                                                  }
-                                                                                            } else {
-                                              NSLog(@"Was returned any another object. Don't know what to do. Deserializer returns only dictionaries or arrays!");
-                                              }
-                                              } else if (error != nil){
-                                              NSLog(@"An error happend while deserializing the JSON data.");
-                                              }
-                                             
-                                             
-                                         }];
+                                                            id jsonObject = [NSJSONSerialization JSONObjectWithData:data
+                                                                                                            options:NSJSONReadingAllowFragments
+                                                                                                              error:&error];
+                                                            if (jsonObject != nil && error == nil) {
+                                                                NSLog(@"Successfully deserialized JSON!");
+                                                                if ([jsonObject isKindOfClass:[NSDictionary class]]) {
+                                                                    NSDictionary *deserializedDictionary = (NSDictionary *)jsonObject;
+                                                                    completion(deserializedDictionary, nil);
+                                                                } else if (error) {
+                                                                    completion(nil, error);
+                                                                    NSLog(@"Was returned any another object. Don't know what to do. Deserializer returns only dictionaries or arrays!");
+                                                                }
+                                                            } else if (error != nil) {
+                                                                NSLog(@"An error happend while deserializing the JSON data.");
+                                                                completion(nil, error);
+                                                            }
+                                                        }];
     [sessionTask resume];
-    
 }
 
--(NSString *)timestamp: (NSNumber *)ts publicKey: (NSString *)publicKey privateKey: (NSString *)privateKey{
-    
-    return [[NSString stringWithFormat:@"%@%@%@",ts, privateKey, publicKey] md5];
-    
-}
+
+
 
 
 

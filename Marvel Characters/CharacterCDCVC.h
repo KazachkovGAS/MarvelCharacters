@@ -8,9 +8,9 @@
 
 #import "CoreDataCollectionViewController.h"
 
-@interface CharacterCDCVC : CoreDataCollectionViewController
+@interface CharacterCDCVC : UICollectionViewController
 
-@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+//@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
 
 @end

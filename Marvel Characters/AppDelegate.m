@@ -18,9 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    TMCRequestManager *manager = [[TMCRequestManager alloc] init];
-    [manager startSession];
-    [manager getRequest];
+    //TMCRequestManager *manager = [[TMCRequestManager alloc] init];
+   // [manager startSession];
     
     
     return YES;

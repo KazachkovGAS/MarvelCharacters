@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B51109ED1D76D04800564BFE /* TMCharactersRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B51109EC1D76D04800564BFE /* TMCharactersRequestManager.m */; };
+		B51109F21D77093300564BFE /* CharacterCDCVL.m in Sources */ = {isa = PBXBuildFile; fileRef = B51109F11D77093300564BFE /* CharacterCDCVL.m */; };
 		B51310611D75A97E004C8EFF /* Character+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B513105E1D75A97E004C8EFF /* Character+CoreDataProperties.m */; };
 		B51310621D75A97E004C8EFF /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = B51310601D75A97E004C8EFF /* Character.m */; };
 		B51310681D75D6A0004C8EFF /* CoreDataCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B51310671D75D6A0004C8EFF /* CoreDataCollectionViewController.m */; };
 		B51310711D75E265004C8EFF /* CharacterCDCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B51310701D75E265004C8EFF /* CharacterCDCVC.m */; };
-		B51310741D75E9E0004C8EFF /* AppDelegate+MOC.m in Sources */ = {isa = PBXBuildFile; fileRef = B51310731D75E9E0004C8EFF /* AppDelegate+MOC.m */; };
+		B56B2BE41D76B87D00963642 /* CharacterCDCVCC.m in Sources */ = {isa = PBXBuildFile; fileRef = B56B2BE31D76B87D00963642 /* CharacterCDCVCC.m */; };
 		B57B7F701D74364B0024ABFB /* TMCRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B57B7F6F1D74364B0024ABFB /* TMCRequestManager.m */; };
 		B5827DB31D748A4A00960CB6 /* Marvel_Characters.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B586C16B1D742149008A72BC /* Marvel_Characters.xcdatamodeld */; };
 		B586C1611D742149008A72BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B586C1601D742149008A72BC /* main.m */; };
@@ -46,6 +48,12 @@
 /* Begin PBXFileReference section */
 		306EDEFB3C42F5C787F9EEE6 /* Pods-Marvel Characters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvel Characters.release.xcconfig"; path = "Pods/Target Support Files/Pods-Marvel Characters/Pods-Marvel Characters.release.xcconfig"; sourceTree = "<group>"; };
 		6B9D2C84CBA259B4281C6DA2 /* libPods-Marvel Characters.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Marvel Characters.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B51109EB1D76D04800564BFE /* TMCharactersRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMCharactersRequestManager.h; path = Model/TMCharactersRequestManager.h; sourceTree = "<group>"; };
+		B51109EC1D76D04800564BFE /* TMCharactersRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMCharactersRequestManager.m; path = Model/TMCharactersRequestManager.m; sourceTree = "<group>"; };
+		B51109EE1D76D5BC00564BFE /* Urls.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Urls.h; path = Model/Urls.h; sourceTree = "<group>"; };
+		B51109EF1D76DEE600564BFE /* ApiKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiKeys.h; sourceTree = "<group>"; };
+		B51109F01D77093300564BFE /* CharacterCDCVL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterCDCVL.h; sourceTree = "<group>"; };
+		B51109F11D77093300564BFE /* CharacterCDCVL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterCDCVL.m; sourceTree = "<group>"; };
 		B513105D1D75A97E004C8EFF /* Character+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Character+CoreDataProperties.h"; path = "Core Data/Character+CoreDataProperties.h"; sourceTree = "<group>"; };
 		B513105E1D75A97E004C8EFF /* Character+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Character+CoreDataProperties.m"; path = "Core Data/Character+CoreDataProperties.m"; sourceTree = "<group>"; };
 		B513105F1D75A97E004C8EFF /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Character.h; path = "Core Data/Character.h"; sourceTree = "<group>"; };
@@ -54,8 +62,8 @@
 		B51310671D75D6A0004C8EFF /* CoreDataCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataCollectionViewController.m; sourceTree = "<group>"; };
 		B513106F1D75E265004C8EFF /* CharacterCDCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterCDCVC.h; sourceTree = "<group>"; };
 		B51310701D75E265004C8EFF /* CharacterCDCVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterCDCVC.m; sourceTree = "<group>"; };
-		B51310721D75E9E0004C8EFF /* AppDelegate+MOC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AppDelegate+MOC.h"; path = "Categories/AppDelegate+MOC.h"; sourceTree = "<group>"; };
-		B51310731D75E9E0004C8EFF /* AppDelegate+MOC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate+MOC.m"; path = "Categories/AppDelegate+MOC.m"; sourceTree = "<group>"; };
+		B56B2BE21D76B87D00963642 /* CharacterCDCVCC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterCDCVCC.h; sourceTree = "<group>"; };
+		B56B2BE31D76B87D00963642 /* CharacterCDCVCC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterCDCVCC.m; sourceTree = "<group>"; };
 		B57B7F6E1D74364B0024ABFB /* TMCRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMCRequestManager.h; path = Model/TMCRequestManager.h; sourceTree = "<group>"; };
 		B57B7F6F1D74364B0024ABFB /* TMCRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMCRequestManager.m; path = Model/TMCRequestManager.m; sourceTree = "<group>"; };
 		B586C15C1D742149008A72BC /* Marvel Characters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marvel Characters.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -244,6 +252,10 @@
 				B51310671D75D6A0004C8EFF /* CoreDataCollectionViewController.m */,
 				B513106F1D75E265004C8EFF /* CharacterCDCVC.h */,
 				B51310701D75E265004C8EFF /* CharacterCDCVC.m */,
+				B56B2BE21D76B87D00963642 /* CharacterCDCVCC.h */,
+				B56B2BE31D76B87D00963642 /* CharacterCDCVCC.m */,
+				B51109F01D77093300564BFE /* CharacterCDCVL.h */,
+				B51109F11D77093300564BFE /* CharacterCDCVL.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -259,8 +271,12 @@
 		B586C17F1D742775008A72BC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B51109EE1D76D5BC00564BFE /* Urls.h */,
+				B51109EF1D76DEE600564BFE /* ApiKeys.h */,
 				B57B7F6E1D74364B0024ABFB /* TMCRequestManager.h */,
 				B57B7F6F1D74364B0024ABFB /* TMCRequestManager.m */,
+				B51109EB1D76D04800564BFE /* TMCharactersRequestManager.h */,
+				B51109EC1D76D04800564BFE /* TMCharactersRequestManager.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -270,8 +286,6 @@
 			children = (
 				B59B4D441D744E4C00FC80B3 /* NSString+MD5Converter.h */,
 				B59B4D451D744E4C00FC80B3 /* NSString+MD5Converter.m */,
-				B51310721D75E9E0004C8EFF /* AppDelegate+MOC.h */,
-				B51310731D75E9E0004C8EFF /* AppDelegate+MOC.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -401,14 +415,15 @@
 				B5B05CC71D748AFF0024A40C /* SeriesItem+CoreDataProperties.m in Sources */,
 				B5B05CD61D748AFF0024A40C /* Thumbnail.m in Sources */,
 				B5B05CC81D748AFF0024A40C /* SeriesItem.m in Sources */,
+				B51109F21D77093300564BFE /* CharacterCDCVL.m in Sources */,
 				B5B05CD71D748AFF0024A40C /* Urls+CoreDataProperties.m in Sources */,
 				B5B05CCA1D748AFF0024A40C /* Series.m in Sources */,
-				B51310741D75E9E0004C8EFF /* AppDelegate+MOC.m in Sources */,
 				B5B05CCD1D748AFF0024A40C /* Comics+CoreDataProperties.m in Sources */,
 				B5B05CD21D748AFF0024A40C /* ComicsItem.m in Sources */,
 				B5B05CD51D748AFF0024A40C /* Thumbnail+CoreDataProperties.m in Sources */,
 				B5B05CC41D748AFF0024A40C /* Events.m in Sources */,
 				B5B05CCE1D748AFF0024A40C /* Comics.m in Sources */,
+				B51109ED1D76D04800564BFE /* TMCharactersRequestManager.m in Sources */,
 				B5B05CC91D748AFF0024A40C /* Series+CoreDataProperties.m in Sources */,
 				B57B7F701D74364B0024ABFB /* TMCRequestManager.m in Sources */,
 				B5B05CCB1D748AFF0024A40C /* Stories+CoreDataProperties.m in Sources */,
@@ -424,6 +439,7 @@
 				B5B05CCC1D748AFF0024A40C /* Stories.m in Sources */,
 				B5B05CD11D748AFF0024A40C /* ComicsItem+CoreDataProperties.m in Sources */,
 				B51310681D75D6A0004C8EFF /* CoreDataCollectionViewController.m in Sources */,
+				B56B2BE41D76B87D00963642 /* CharacterCDCVCC.m in Sources */,
 				B59B4D461D744E4C00FC80B3 /* NSString+MD5Converter.m in Sources */,
 				B5B05CD31D748AFF0024A40C /* StoriesItem+CoreDataProperties.m in Sources */,
 				B5B05CC31D748AFF0024A40C /* Events+CoreDataProperties.m in Sources */,

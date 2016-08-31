@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 +(NSArray *)addNewData:(NSArray *)data inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
 
+//+(void)loadPicturesFromCharactersArray:(NSArray *)characters intoManagedObjectContext:(NSManagedObjectContext *)context;
+
 @end
 
 NS_ASSUME_NONNULL_END
