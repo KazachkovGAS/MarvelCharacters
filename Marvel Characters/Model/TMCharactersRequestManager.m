@@ -6,6 +6,7 @@
 //  Copyright © 2016 Максим. All rights reserved.
 //
 
+#import "TMCRequestManager.h"
 #import "TMCharactersRequestManager.h"
 #import "Urls.h"
 #import <CoreData/CoreData.h>

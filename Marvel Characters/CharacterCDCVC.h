@@ -10,7 +10,6 @@
 
 @interface CharacterCDCVC : UICollectionViewController
 
-//@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
 
 @end

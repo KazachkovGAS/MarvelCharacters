@@ -6,7 +6,6 @@
 //  Copyright © 2016 Максим. All rights reserved.
 //
 
-#import "TMCRequestManager.h"
 
 @interface TMCharactersRequestManager : NSObject
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B50066441D784D3F0090AB9D /* UIImageView+getImageFromUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = B50066431D784D3F0090AB9D /* UIImageView+getImageFromUrl.m */; };
 		B51109ED1D76D04800564BFE /* TMCharactersRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B51109EC1D76D04800564BFE /* TMCharactersRequestManager.m */; };
 		B51109F21D77093300564BFE /* CharacterCDCVL.m in Sources */ = {isa = PBXBuildFile; fileRef = B51109F11D77093300564BFE /* CharacterCDCVL.m */; };
 		B51310611D75A97E004C8EFF /* Character+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B513105E1D75A97E004C8EFF /* Character+CoreDataProperties.m */; };
@@ -48,6 +49,9 @@
 /* Begin PBXFileReference section */
 		306EDEFB3C42F5C787F9EEE6 /* Pods-Marvel Characters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvel Characters.release.xcconfig"; path = "Pods/Target Support Files/Pods-Marvel Characters/Pods-Marvel Characters.release.xcconfig"; sourceTree = "<group>"; };
 		6B9D2C84CBA259B4281C6DA2 /* libPods-Marvel Characters.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Marvel Characters.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B50066421D784D3F0090AB9D /* UIImageView+getImageFromUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+getImageFromUrl.h"; path = "Categories/UIImageView+getImageFromUrl.h"; sourceTree = "<group>"; };
+		B50066431D784D3F0090AB9D /* UIImageView+getImageFromUrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+getImageFromUrl.m"; path = "Categories/UIImageView+getImageFromUrl.m"; sourceTree = "<group>"; };
+		B50066451D7861B80090AB9D /* VariantImageName.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VariantImageName.h; sourceTree = "<group>"; };
 		B51109EB1D76D04800564BFE /* TMCharactersRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMCharactersRequestManager.h; path = Model/TMCharactersRequestManager.h; sourceTree = "<group>"; };
 		B51109EC1D76D04800564BFE /* TMCharactersRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMCharactersRequestManager.m; path = Model/TMCharactersRequestManager.m; sourceTree = "<group>"; };
 		B51109EE1D76D5BC00564BFE /* Urls.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Urls.h; path = Model/Urls.h; sourceTree = "<group>"; };
@@ -273,6 +277,7 @@
 			children = (
 				B51109EE1D76D5BC00564BFE /* Urls.h */,
 				B51109EF1D76DEE600564BFE /* ApiKeys.h */,
+				B50066451D7861B80090AB9D /* VariantImageName.h */,
 				B57B7F6E1D74364B0024ABFB /* TMCRequestManager.h */,
 				B57B7F6F1D74364B0024ABFB /* TMCRequestManager.m */,
 				B51109EB1D76D04800564BFE /* TMCharactersRequestManager.h */,
@@ -286,6 +291,8 @@
 			children = (
 				B59B4D441D744E4C00FC80B3 /* NSString+MD5Converter.h */,
 				B59B4D451D744E4C00FC80B3 /* NSString+MD5Converter.m */,
+				B50066421D784D3F0090AB9D /* UIImageView+getImageFromUrl.h */,
+				B50066431D784D3F0090AB9D /* UIImageView+getImageFromUrl.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -428,6 +435,7 @@
 				B57B7F701D74364B0024ABFB /* TMCRequestManager.m in Sources */,
 				B5B05CCB1D748AFF0024A40C /* Stories+CoreDataProperties.m in Sources */,
 				B51310711D75E265004C8EFF /* CharacterCDCVC.m in Sources */,
+				B50066441D784D3F0090AB9D /* UIImageView+getImageFromUrl.m in Sources */,
 				B51310621D75A97E004C8EFF /* Character.m in Sources */,
 				B5B05CCF1D748AFF0024A40C /* EventsItem+CoreDataProperties.m in Sources */,
 				B586C1641D742149008A72BC /* AppDelegate.m in Sources */,

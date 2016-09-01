@@ -22,17 +22,12 @@
 
 @implementation CharacterCDCVC
 
--(TMCharactersRequestManager *)charactersRequestManager{
+- (TMCharactersRequestManager *)charactersRequestManager{
     if (!_charactersRequestManager) {
         _charactersRequestManager = [[TMCharactersRequestManager alloc] init];
     }
     return _charactersRequestManager;
 }
-
-//- (NSArray *)characters{
-//    
-//    return _characters;
-//}
 
 - (void)viewDidLoad{
     [super viewDidLoad];
@@ -55,23 +50,6 @@
     //    self.managedObjectContext = delegate.managedObjectContext;
 }
 
-/*
--(void)setManagedObjectContext:(NSManagedObjectContext *)managedObjectContext{
-    _managedObjectContext = managedObjectContext;
-    
-    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Character"];
-    request.predicate = nil;
-    request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"name"
-                                                              ascending:YES
-                                                               selector:@selector(localizedStandardCompare:)]];
-    request.fetchLimit = 20;
-    
-    self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request
-                                                                        managedObjectContext:managedObjectContext
-                                                                          sectionNameKeyPath:nil
-                                                                                   cacheName:nil];
-}
-*/
 
 #pragma mark <UICollectionViewDataSource>
 
