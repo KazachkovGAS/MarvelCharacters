@@ -10,6 +10,6 @@
 
 @interface UIImageView (getImageFromUrl)
 
-- (UIImageView *)getImageWithURL: (NSString *)url;
+- (void)getImageWithURL: (NSString *)url;
 
 @end

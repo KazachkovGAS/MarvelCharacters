@@ -11,9 +11,9 @@
 #import "CharacterCDCVCC.h"
 #import "AppDelegate.h"
 #import "TMCharactersRequestManager.h"
-#import "CharacterCDCVL.h"
+#import "DetailCharacterInformation.h"
 
-@interface CharacterCDCVC()
+@interface CharacterCDCVC() <UICollectionViewDelegate>
 
 @property (nonatomic, strong) TMCharactersRequestManager *charactersRequestManager;
 @property (nonatomic, strong) NSArray *characters;
@@ -21,6 +21,11 @@
 @end
 
 @implementation CharacterCDCVC
+
+static CGFloat leftAndRightPadding = 32.0;
+static CGFloat numberOfItemsPerRow = 3.0;
+static CGFloat heightAdjustment = 30.0;
+
 
 - (TMCharactersRequestManager *)charactersRequestManager{
     if (!_charactersRequestManager) {
@@ -31,6 +36,11 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    CGFloat width = ( CGRectGetWidth(self.collectionView.frame) - leftAndRightPadding ) / numberOfItemsPerRow ;
+    UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *) self.collectionViewLayout;
+    [layout setItemSize:CGSizeMake(width, width + heightAdjustment)];
+    
+   
     [self.charactersRequestManager getCharactersWithCompletion:^(NSArray *characters, NSError *error) {
         if (!error){
             self.characters = characters;
@@ -49,6 +59,23 @@
     //    AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     //    self.managedObjectContext = delegate.managedObjectContext;
 }
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    Character *character = (Character *) [self.characters objectAtIndex:indexPath.item];
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    DetailCharacterInformation *detailCharacterInformation = [sb instantiateViewControllerWithIdentifier:@"Detail Character Information"];
+    detailCharacterInformation.character = character;
+    [self.navigationController pushViewController:detailCharacterInformation animated:YES];
+}
+
+//- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtPath:(NSIndexPath *)indexPath {
+//    
+//    Character *character = (Character *) [self.characters objectAtIndex:indexPath.item];
+//    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//    DetailCharacterInformation *detailCharacterInformation = [sb instantiateViewControllerWithIdentifier:@"DetailCharacterInformation"];
+//    detailCharacterInformation.character = character;
+//    [self.navigationController pushViewController:detailCharacterInformation animated:YES];
+//}
 
 
 #pragma mark <UICollectionViewDataSource>
@@ -79,6 +106,10 @@
     
     return cell;
 }
+
+
+
+
 
 
 

@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B50066441D784D3F0090AB9D /* UIImageView+getImageFromUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = B50066431D784D3F0090AB9D /* UIImageView+getImageFromUrl.m */; };
+		B50E258C1D79ADBC00377726 /* DetailCharacterInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = B50E258B1D79ADBC00377726 /* DetailCharacterInformation.m */; };
 		B51109ED1D76D04800564BFE /* TMCharactersRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B51109EC1D76D04800564BFE /* TMCharactersRequestManager.m */; };
-		B51109F21D77093300564BFE /* CharacterCDCVL.m in Sources */ = {isa = PBXBuildFile; fileRef = B51109F11D77093300564BFE /* CharacterCDCVL.m */; };
 		B51310611D75A97E004C8EFF /* Character+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B513105E1D75A97E004C8EFF /* Character+CoreDataProperties.m */; };
 		B51310621D75A97E004C8EFF /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = B51310601D75A97E004C8EFF /* Character.m */; };
 		B51310681D75D6A0004C8EFF /* CoreDataCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B51310671D75D6A0004C8EFF /* CoreDataCollectionViewController.m */; };
@@ -52,12 +52,12 @@
 		B50066421D784D3F0090AB9D /* UIImageView+getImageFromUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+getImageFromUrl.h"; path = "Categories/UIImageView+getImageFromUrl.h"; sourceTree = "<group>"; };
 		B50066431D784D3F0090AB9D /* UIImageView+getImageFromUrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+getImageFromUrl.m"; path = "Categories/UIImageView+getImageFromUrl.m"; sourceTree = "<group>"; };
 		B50066451D7861B80090AB9D /* VariantImageName.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VariantImageName.h; sourceTree = "<group>"; };
+		B50E258A1D79ADBC00377726 /* DetailCharacterInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailCharacterInformation.h; sourceTree = "<group>"; };
+		B50E258B1D79ADBC00377726 /* DetailCharacterInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCharacterInformation.m; sourceTree = "<group>"; };
 		B51109EB1D76D04800564BFE /* TMCharactersRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMCharactersRequestManager.h; path = Model/TMCharactersRequestManager.h; sourceTree = "<group>"; };
 		B51109EC1D76D04800564BFE /* TMCharactersRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMCharactersRequestManager.m; path = Model/TMCharactersRequestManager.m; sourceTree = "<group>"; };
 		B51109EE1D76D5BC00564BFE /* Urls.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Urls.h; path = Model/Urls.h; sourceTree = "<group>"; };
 		B51109EF1D76DEE600564BFE /* ApiKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiKeys.h; sourceTree = "<group>"; };
-		B51109F01D77093300564BFE /* CharacterCDCVL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterCDCVL.h; sourceTree = "<group>"; };
-		B51109F11D77093300564BFE /* CharacterCDCVL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterCDCVL.m; sourceTree = "<group>"; };
 		B513105D1D75A97E004C8EFF /* Character+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Character+CoreDataProperties.h"; path = "Core Data/Character+CoreDataProperties.h"; sourceTree = "<group>"; };
 		B513105E1D75A97E004C8EFF /* Character+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Character+CoreDataProperties.m"; path = "Core Data/Character+CoreDataProperties.m"; sourceTree = "<group>"; };
 		B513105F1D75A97E004C8EFF /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Character.h; path = "Core Data/Character.h"; sourceTree = "<group>"; };
@@ -258,8 +258,8 @@
 				B51310701D75E265004C8EFF /* CharacterCDCVC.m */,
 				B56B2BE21D76B87D00963642 /* CharacterCDCVCC.h */,
 				B56B2BE31D76B87D00963642 /* CharacterCDCVCC.m */,
-				B51109F01D77093300564BFE /* CharacterCDCVL.h */,
-				B51109F11D77093300564BFE /* CharacterCDCVL.m */,
+				B50E258A1D79ADBC00377726 /* DetailCharacterInformation.h */,
+				B50E258B1D79ADBC00377726 /* DetailCharacterInformation.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -331,6 +331,7 @@
 				TargetAttributes = {
 					B586C15B1D742149008A72BC = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 36NK4K4KHC;
 					};
 				};
 			};
@@ -422,7 +423,6 @@
 				B5B05CC71D748AFF0024A40C /* SeriesItem+CoreDataProperties.m in Sources */,
 				B5B05CD61D748AFF0024A40C /* Thumbnail.m in Sources */,
 				B5B05CC81D748AFF0024A40C /* SeriesItem.m in Sources */,
-				B51109F21D77093300564BFE /* CharacterCDCVL.m in Sources */,
 				B5B05CD71D748AFF0024A40C /* Urls+CoreDataProperties.m in Sources */,
 				B5B05CCA1D748AFF0024A40C /* Series.m in Sources */,
 				B5B05CCD1D748AFF0024A40C /* Comics+CoreDataProperties.m in Sources */,
@@ -441,6 +441,7 @@
 				B586C1641D742149008A72BC /* AppDelegate.m in Sources */,
 				B5B05CD81D748AFF0024A40C /* Urls.m in Sources */,
 				B51310611D75A97E004C8EFF /* Character+CoreDataProperties.m in Sources */,
+				B50E258C1D79ADBC00377726 /* DetailCharacterInformation.m in Sources */,
 				B5827DB31D748A4A00960CB6 /* Marvel_Characters.xcdatamodeld in Sources */,
 				B5B05CD01D748AFF0024A40C /* EventsItem.m in Sources */,
 				B586C1611D742149008A72BC /* main.m in Sources */,
@@ -565,10 +566,13 @@
 			baseConfigurationReference = E42872D6EDE78F32D52F74B1 /* Pods-Marvel Characters.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Marvel Characters/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gas.Marvel-Characters";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -577,10 +581,13 @@
 			baseConfigurationReference = 306EDEFB3C42F5C787F9EEE6 /* Pods-Marvel Characters.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Marvel Characters/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gas.Marvel-Characters";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

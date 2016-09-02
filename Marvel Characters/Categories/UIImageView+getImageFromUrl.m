@@ -10,39 +10,49 @@
 
 @implementation UIImageView (getImageFromUrl)
 
-- (UIImageView *)getImageWithURL:(NSString *)url {
-    UIImageView *image = nil;
+- (void)getImageWithURL:(NSString *)url {
+  //  UIImageView *image = nil;
     [self getImageFromURL:url completion:^(NSData *imageData, NSError *error) {
         if (!error) {
-            self.image = [UIImage imageWithData:imageData];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.image = [UIImage imageWithData:imageData];
+            });
+        } else {
+            self.image = nil;
         }
     }];
-    return image;
 }
 
 - (void)getImageFromURL:(NSString *)url completion:(void (^)(NSData *imageData, NSError *error))completion{
     
-    NSFileManager *fileManager = [[NSFileManager alloc] init];
-    NSError *error;
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSError *fileManagerError;
     NSString *tempDir = NSTemporaryDirectory();
-    NSString *imagesDir = [tempDir stringByAppendingPathComponent:@"images"];
+//    NSArray *urls = [fileManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
+//    NSURL *documentsDirectory = [urls objectAtIndex:0];
+//    NSString *imagesDir = [[documentsDirectory URLByAppendingPathComponent:@"images"] absoluteString];
+    NSString *imagesDir = [tempDir stringByAppendingPathComponent:tempDir];
     if (![fileManager fileExistsAtPath:imagesDir]){
         if ([fileManager createDirectoryAtPath:imagesDir
                    withIntermediateDirectories:YES
                                     attributes:nil
-                                         error:&error]) {
+                                         error:&fileManagerError]) {
             NSLog(@"Successfully created the directory");
         } else {
-            NSLog(@"Failed to create the directory. Error = %@", error);
+            NSLog(@"Failed to create the directory. Error = %@", fileManagerError);
         }
     } else {
         NSLog(@"Directory %@ already exists",imagesDir);
        
     }
-    NSString *filePath = [imagesDir stringByAppendingPathComponent:url];
+    NSData *base64EncodedImageURLName = [[url dataUsingEncoding:NSUTF8StringEncoding] base64EncodedDataWithOptions:0];
+    NSString *decodedImageURLName = [[NSString alloc] initWithData:base64EncodedImageURLName encoding:NSUTF8StringEncoding];
+    NSLog(@"URL : %@", url);
+    NSLog(@"Encoded to : %@", decodedImageURLName);
+    NSString *filePath = [imagesDir stringByAppendingPathComponent:decodedImageURLName];
     if ([fileManager fileExistsAtPath:filePath]) {
         NSLog(@"FILE EXISTS!");
-        NSData *data = [[NSData alloc] initWithContentsOfFile:imagesDir];
+        NSData *data = [[NSData alloc] initWithContentsOfFile:filePath];
         completion(data, nil);
     } else {
         NSLog(@"START DOWNLOAD FROM URL %@", url);
@@ -51,14 +61,14 @@
         
         NSURLSessionDownloadTask *sessionDownloadTask = [session downloadTaskWithRequest:request
                                                                             completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-                                                                                [fileManager copyItemAtURL:location
-                                                                                                     toURL:[NSURL fileURLWithPath:filePath]
-                                                                                                     error:&error];
-                                                                                if (!error){
-                                                                                    NSData *data = [[NSData alloc] initWithContentsOfFile:filePath];
-                                                                                    completion(data, nil);
+                                                                                if (error == nil) {
+
+                                                                                    NSData *dataImage = [NSData dataWithContentsOfURL:location];
+                                                                                    [dataImage writeToFile:filePath atomically:YES];
+                                                                                    completion(dataImage, nil);
                                                                                 } else {
                                                                                     completion(nil, error);
+                                                                                
                                                                                 }
                                                                             }];
 
