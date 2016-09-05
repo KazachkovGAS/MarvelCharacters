@@ -9,13 +9,23 @@
 #import "DetailCharacterInformation.h"
 #import "UIImageView+getImageFromUrl.h"
 #import "Thumbnail.h"
+#import "Comics.h"
+#import "Series.h"
+#import "Stories.h"
+#import "Events.h"
 #import "VariantImageName.h"
 
 @interface DetailCharacterInformation()
 
 @property (weak, nonatomic) IBOutlet UIImageView *characterImageView;
 @property (weak, nonatomic) IBOutlet UITextView *characterDescriptionText;
-@property (weak, nonatomic) IBOutlet UITextField *characterUid;
+@property (weak, nonatomic) IBOutlet UILabel *characterUid;
+@property (weak, nonatomic) IBOutlet UILabel *characterName;
+@property (weak, nonatomic) IBOutlet UILabel *comicsNumber;
+@property (weak, nonatomic) IBOutlet UILabel *seriesNumber;
+@property (weak, nonatomic) IBOutlet UILabel *storiesNumber;
+@property (weak, nonatomic) IBOutlet UILabel *eventsNumber;
+
 
 @end
 
@@ -23,9 +33,19 @@
 
 
 - (void)updateUI {
-    [self.characterImageView getImageWithURL:self.character.image.path];
-    self.characterDescriptionText.text = self.character.descriptionBio;
-    self.characterUid.text = [NSString stringWithFormat:@"%@",self.character.uid];
+    
+    [self.characterImageView getImageWithURL:[self urlForImageCharacter]];
+    if ([self.character.descriptionBio isEqualToString:@""]){
+        self.characterDescriptionText.textColor = [UIColor redColor];
+        self.characterDescriptionText.text = @"Information not found";
+    } else {
+        self.characterDescriptionText.text = self.character.descriptionBio;
+    }
+    self.characterUid.text = [NSString stringWithFormat:@"%@", self.character.uid];
+    self.comicsNumber.text = [NSString stringWithFormat:@"%@", self.character.comics.available];
+    self.seriesNumber.text = [NSString stringWithFormat:@"%@", self.character.series.available];
+    self.storiesNumber.text = [NSString stringWithFormat:@"%@", self.character.stories.available];
+    self.eventsNumber.text = [NSString stringWithFormat:@"%@", self.character.events.available];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
